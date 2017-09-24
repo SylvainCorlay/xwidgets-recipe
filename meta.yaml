@@ -1,0 +1,52 @@
+{% set name = "xwidgets" %}
+{% set version = "0.2.0" %}
+{% set sha256 = "3d2b2498d44705abc4a8f099a7f737a17419c2cdd8afe2a8121738315b534c6d" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://github.com/QuantStack/xwidgets/archive/{{ version }}.tar.gz
+  sha256: {{ sha256 }}
+
+build:
+  number: 0
+  skip: true  # [win and py<35]
+  features:   # [win]
+    - vc14    # [win]
+
+requirements:
+  build:
+    - toolchain
+    - cmake
+  run:
+    - xeus  >=0.6.0,<0.7
+    - cppzmq
+    - xtl >=0.2.2,<0.3.0
+    - xproperty >=0.3.0,<0.4
+    
+test:
+  commands:
+    - test -d ${PREFIX}/include/xwidgets  # [unix]
+    - test -f ${PREFIX}/include/xwidgets/xtransport.hpp  # [unix]
+    - test -f ${PREFIX}/lib/cmake/xwidgets/xwidgetsConfig.cmake  # [unix]
+    - test -f ${PREFIX}/lib/cmake/xwidgets/xwidgetsConfigVersion.cmake  # [unix]
+    - if exist %LIBRARY_PREFIX%\include\xwidgets\xtransport.hpp (exit 0) else (exit 1)  # [win]
+    - if exist %LIBRARY_PREFIX%\lib\xwidgetsConfig.cmake (exit 0) else (exit 1)  # [win]
+    - if exist %LIBRARY_PREFIX%\lib\xwidgetsConfigVersion.cmake (exit 0) else (exit 1)  # [win]
+
+about:
+  home: http://quantstack.net/xwidgets
+  license: BSD 3-Clause
+  license_family: BSD
+  license_file: LICENSE
+  summary: 'C++ implementation of the Jupyter Interactive widgets'
+  doc_url: http://xwidgets.readthedocs.io
+  dev_url: https://github.com/QuantStack/xwidgets
+
+extra:
+  recipe-maintainers:
+    - SylvainCorlay
+    - JohanMabille
