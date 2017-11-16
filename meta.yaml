@@ -1,6 +1,6 @@
 {% set name = "xwidgets" %}
-{% set version = "0.5.1" %}
-{% set sha256 = "de8b369b9533c31fd4288cbccc88da22304276d3c830f649d40cf3f98ef27da3" %}
+{% set version = "0.5.2" %}
+{% set sha256 = "31b82f435aeef88e95671e239bf4dd0e5f794f1028219a0374e3b99ae6a53c5f" %}
 
 package:
   name: {{ name|lower }}
@@ -24,7 +24,7 @@ requirements:
   run:
     - xeus >=0.8.0,<0.9
     - cppzmq
-    - xtl >=0.3.4,<0.4.0
+    - xtl >=0.3.5,<0.4.0
     - xproperty >=0.4.2,<0.5
     
 test:
