@@ -21,6 +21,8 @@ requirements:
   build:
     - toolchain
     - cmake
+    - xeus >=0.8.0,<0.9
+    - xtl >=0.3.5,<0.4.0
   run:
     - xeus >=0.8.0,<0.9
     - cppzmq
