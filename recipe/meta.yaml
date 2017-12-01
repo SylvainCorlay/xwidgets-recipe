@@ -22,13 +22,13 @@ requirements:
     - toolchain
     - cmake
     - xeus >=0.8.0,<0.9
-    - xtl >=0.3.5,<0.4.0
-    - xproperty >=0.4.2,<0.5
+    - xtl >=0.3.6,<0.4.0
+    - xproperty >=0.6.0,<0.7
   run:
     - xeus >=0.8.0,<0.9
     - cppzmq
-    - xtl >=0.3.5,<0.4.0
-    - xproperty >=0.4.2,<0.5
+    - xtl >=0.3.6,<0.4.0
+    - xproperty >=0.6.0,<0.7
     
 test:
   commands:
