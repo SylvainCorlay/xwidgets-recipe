@@ -23,6 +23,7 @@ requirements:
     - cmake
     - xeus >=0.8.0,<0.9
     - xtl >=0.3.5,<0.4.0
+    - xproperty >=0.4.2,<0.5
   run:
     - xeus >=0.8.0,<0.9
     - cppzmq
