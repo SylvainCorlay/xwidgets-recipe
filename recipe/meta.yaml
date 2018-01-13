@@ -3,7 +3,7 @@ package:
     version: 0.6.0
 source:
     fn: xwidgets-0.6.0.tar.gz
-    sha256: d255fc6c10f1f61341c876d9dae106910958f734392600423b3e77a126d898ff
+    sha256: d791b6fb61332c5e5ab4928876d47921daad90a8b721935cad17c25d899fc2cb
     url: https://github.com/QuantStack/xwidgets/archive/0.6.0.tar.gz
 build:
   noarch: ''
