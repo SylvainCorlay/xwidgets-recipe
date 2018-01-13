@@ -6,6 +6,8 @@ source:
     sha256: d255fc6c10f1f61341c876d9dae106910958f734392600423b3e77a126d898ff
     url: https://github.com/QuantStack/xwidgets/archive/0.6.0.tar.gz
 build:
+  noarch: ''
+  noarch_python: false
   number: 0
   skip: true  # [win and py<35]
   features:   # [win]
@@ -15,7 +17,7 @@ requirements:
   build:
     - toolchain
     - cmake
-    - xeus >=0.9.0,<1.
+    - xeus >=0.9.0,<1.0
     - xtl >=0.3.8,<0.4.0
     - xproperty >=0.6.0,<0.7
   run:
