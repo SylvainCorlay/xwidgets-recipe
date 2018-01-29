@@ -5,7 +5,7 @@ env:
   matrix:
   - CONDA_PY=36
   global:
-  - secure: kwahmJ4YSgenjh2mufsg6BC7dwao96IDZXNCTTtv2zCNXMD1HXApzltUchGukxDUpTET7vvO45hmYzQDhIBYBpKvVMEhe0Eu7mQkmcNs87NjcYNVXubFLsG8j80l0tcLuVfhL1zcOVfPHvJbNaNOFFFuzomSI59v6v4Qfb//EOVnznb/Eby0zcd39Xp7nTxekDNwaS2V7mlPR23rTTdjjw5CQi7cK5TJU80xWLQaQCJbPuMYUlIOSkmI1aJk0sAgHb599woeOsFOTBEQ9yH/mYR41sSC/0pWoYHIgd2rdQi5JNTzMW5otLxp2SQiSbgLpQ1glsoSx7B3YA3QKwmyaMKj8WmvOE6NLk1sOa185MHzcW7Rb3b4SrEjxtMhGsDIfmBSnX95tL2Jh+RlriUy0zD4ylqpiUKB8VCyQ7/xf3Mon1SEQScda2oqv+C732Vv3DSDbCcfTrLpgyl4SlfAFivvukzRX/eDrnTTNMRcbbdvJr5skRAWqBdoyVnVvog/DHKFJWmhQVKUKvAALe6MHuScL6P45MGuP5E2x1QxoByvjb9C79pBjRk1E/Ys/Dw3YXfxDs04aBrXg1exhlmKnIk6aXWjVbYGmnWqbOQzJpj6tN7XmOnXGBlB2BljNvFNzflASfLXoqkwdSsGTqW1Rr6UsaVIGRvsTWHVl3LuBLc=
+  - secure: Jxro2d/4WUSmjyh3JjYqi1TC6XC7ffbg6xc3+zZvMReBUegzO1inbJiSnuDV28qrF2wMAkc+OivfpYXl/iS8M3goGyWZ14d5SinfkjNOSOG1kRM+pKk4WCAcBmeSdAG0ah5G6i++C8ZHsCiimoiGq+q90cJyGiubKYxx+mXm6NvZR+XwTvRca8P97EScpXzP9B+wQ2RJdLkKcUZr5FbpTlFfAk7Tj/R2N0l88j/axYeuqtlcVK8jCSci52snm5i7xJd6Ysr8lmL0wreSjfE8huYM1XQqVx7Rp9MZPViDlbJjslexhUByF/DDC2tH17xfqgVx01zahxC/lnW4c2YyDHV0G8j8d/JwIZBUEpoj7M3+A4UKsG16eWpp6jvJFn/jbMTCq6gWgYLVIZqL/HDVcn9jufaYrRJNumNpYtOpReT5Sjr4mMLQwhE56Sh+uyh8UzBtASVLkGAHYz/9Sv/8AMC4oEXemsr5ec6D4H1pGWg8b66RRCwHJrsmzAaX3DJd3zyt9LP0qlSth953eMwgmtvmbWQCLp6sjw0N4eyxCvmGye2Axg+MvyhzIO1C8YjTlQMNtn0jUnUeicxF9C2dSq0Ee7HFj3q5mKUY999T1Q3jvRJRU/NQkbonfehumnxUgzvqfPlx+/5vIy8lYrYxsZMcCK/R+3tUB9JmGqMTJF8=
 before_install:
 - |
   (curl https://raw.githubusercontent.com/conda-forge/conda-forge-build-setup-feedstock/master/recipe/ff_ci_pr_build.py | \
@@ -32,10 +32,10 @@ install:
   conda config --remove channels defaults
   conda config --add channels defaults
   conda config --add channels conda-forge
-  conda config --add channels gouarin
+  conda config --add channels QuantStack
   conda config --set show_channel_urls true
   conda install --yes --quiet conda-forge-build-setup
   source run_conda_forge_build_setup
 script:
 - conda build ./recipe
-- upload_or_check_non_existence ./recipe gouarin --channel=main
+- upload_or_check_non_existence ./recipe QuantStack --channel=main

@@ -1,16 +1,22 @@
+{% set name = "xwidgets" %}
+{% set version = "0.6.1" %}
+{% set sha256 = "12140e7e096a08ae40d98ff216be3cd2652a98e5f31433443a8af35821d7090c" %}
+
 package:
-    name: xwidgets
-    version: 0.6.0
+  name: {{ name|lower }}
+  version: {{ version }}
+
 source:
-    fn: xwidgets-0.6.0.tar.gz
-    sha256: d791b6fb61332c5e5ab4928876d47921daad90a8b721935cad17c25d899fc2cb
-    url: https://github.com/QuantStack/xwidgets/archive/0.6.0.tar.gz
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://github.com/QuantStack/xwidgets/archive/{{ version }}.tar.gz
+  sha256: {{ sha256 }}
+
 build:
   noarch: ''
   noarch_python: false
   number: 0
   skip: true  # [win and py<35]
-  features:   # [win]
+  features:
     - vc14    # [win]
 
 requirements:
@@ -18,12 +24,12 @@ requirements:
     - toolchain
     - cmake
     - xeus >=0.9.0,<1.0
-    - xtl >=0.3.8,<0.4.0
+    - xtl >=0.4.0,<0.5.0
     - xproperty >=0.6.0,<0.7
   run:
     - xeus >=0.9.0,<1.0
     - cppzmq >=4.2.2,<4.3
-    - xtl >=0.3.8,<0.4.0
+    - xtl >=0.4.0,<0.5.0
     - xproperty >=0.6.0,<0.7
     
 test:
