@@ -14,7 +14,7 @@ source:
 build:
   noarch: ''
   noarch_python: false
-  number: 0
+  number: 1
   skip: true  # [win and py<35]
   features:
     - vc14    # [win]
@@ -23,13 +23,13 @@ requirements:
   build:
     - toolchain
     - cmake
-    - xeus >=0.9.0,<1.0
+    - xeus >=0.9.0,<0.10.0
     - xtl >=0.4.0,<0.5.0
     - xproperty >=0.6.0,<0.7
     - gcc-7             # [linux]
     - util-linux        # [linux]
   run:
-    - xeus >=0.9.0,<1.0
+    - xeus >=0.9.0,<0.10.0
     - cppzmq >=4.2.2,<4.3
     - xtl >=0.4.0,<0.5.0
     - xproperty >=0.6.0,<0.7
