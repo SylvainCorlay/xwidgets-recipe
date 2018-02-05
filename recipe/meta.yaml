@@ -24,6 +24,7 @@ requirements:
     - toolchain
     - cmake
     - xeus >=0.10.1,<0.11
+    - cppzmq 4.2.3
     - xtl >=0.4,<0.5
     - xproperty >=0.7,<0.8
   run:
