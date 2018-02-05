@@ -6,4 +6,4 @@ cmake -DCMAKE_BUILD_TYPE=Release     \
       -DDISABLE_ARCH_NATIVE=ON       \
       $SRC_DIR
 
-make install
+make VERBOSE=1 install

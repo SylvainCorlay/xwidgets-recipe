@@ -23,6 +23,7 @@ requirements:
   build:
     - toolchain
     - cmake
+    - gcc-7             # [linux]
     - xeus >=0.10.1,<0.11
     - cppzmq 4.2.3
     - xtl >=0.4,<0.5
