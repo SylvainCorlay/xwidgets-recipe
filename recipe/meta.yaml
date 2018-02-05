@@ -1,16 +1,22 @@
+{% set name = "xwidgets" %}
+{% set version = "0.7.0" %}
+{% set sha256 = "565c37b73ddb17ca2b16fedf2b5407e9b26efeefc46758a532634d547af17372" %}
+
 package:
-    name: xwidgets
-    version: 0.7.0
+  name: {{ name|lower }}
+  version: {{ version }}
+
 source:
-    fn: xwidgets-0.7.0.tar.gz
-    sha256: 565c37b73ddb17ca2b16fedf2b5407e9b26efeefc46758a532634d547af17372
-    url: https://github.com/QuantStack/xwidgets/archive/0.7.0.tar.gz
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://github.com/QuantStack/xwidgets/archive/{{ version }}.tar.gz
+  sha256: {{ sha256 }}
+
 build:
   noarch: ''
   noarch_python: false
-  number: 0
+  number: 1
   skip: true  # [win and py<35]
-  features:   # [win]
+  features:
     - vc14    # [win]
 
 requirements:
