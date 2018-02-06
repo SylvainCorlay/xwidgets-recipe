@@ -1,6 +1,6 @@
 {% set name = "xwidgets" %}
-{% set version = "0.7.0" %}
-{% set sha256 = "565c37b73ddb17ca2b16fedf2b5407e9b26efeefc46758a532634d547af17372" %}
+{% set version = "0.7.1" %}
+{% set sha256 = "6b5080a0f3c2fe3ad2d0611ba899569fa4b018c9c7fd6cbc0aa978f076134245" %}
 
 package:
   name: {{ name|lower }}
@@ -14,7 +14,7 @@ source:
 build:
   noarch: ''
   noarch_python: false
-  number: 1
+  number: 0
   skip: true  # [win and py<35]
   features:
     - vc14    # [win]
@@ -28,12 +28,14 @@ requirements:
     - cppzmq 4.2.3
     - xtl >=0.4,<0.5
     - xproperty >=0.7,<0.8
+    - clangdev          # [osx]
+    - libcxx            # [osx]
   run:
     - xeus >=0.10.1,<0.11
     - cppzmq 4.2.3
     - xtl >=0.4,<0.5
     - xproperty >=0.7,<0.8
-    
+
 test:
   commands:
     - test -d ${PREFIX}/include/xwidgets  # [unix]
