@@ -1,6 +1,6 @@
 {% set name = "xwidgets" %}
-{% set version = "0.8.0" %}
-{% set sha256 = "6d3d714723c036ad6763b2b3bc1c6875cc9df64415ee6c8460fa45ffd04603d9" %}
+{% set version = "0.8.1" %}
+{% set sha256 = "d0539fec6212981661bfab02339d7769b4bb0001be6d53a25f27f2f1070c7dbc" %}
 
 package:
   name: {{ name|lower }}
@@ -12,8 +12,6 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  noarch: ''
-  noarch_python: false
   number: 0
   skip: true  # [win and py<35]
   features:
