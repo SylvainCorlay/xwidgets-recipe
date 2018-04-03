@@ -1,6 +1,6 @@
 {% set name = "xwidgets" %}
-{% set version = "0.8.1" %}
-{% set sha256 = "d0539fec6212981661bfab02339d7769b4bb0001be6d53a25f27f2f1070c7dbc" %}
+{% set version = "0.8.2" %}
+{% set sha256 = "126cf87277b15b7ac45181ce38596f3639a2afd679628a400f7ef7d42db55fcc" %}
 
 package:
   name: {{ name|lower }}
