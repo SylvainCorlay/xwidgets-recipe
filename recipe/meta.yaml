@@ -1,6 +1,6 @@
 {% set name = "xwidgets" %}
-{% set version = "0.11.1" %}
-{% set sha256 = "16795e5b44ba0fb222f90804bc811f6b93756d4c55c4b06aa3b378ca810d728b" %}
+{% set version = "0.12.0" %}
+{% set sha256 = "7a168047a9971eb532ac3e98cae022906a9f4b760f0f567dfefc66bf42cc0481" %}
 
 package:
   name: {{ name|lower }}
@@ -22,7 +22,7 @@ requirements:
     - toolchain
     - cmake
     - gcc-7             # [linux]
-    - xeus >=0.12.0,<0.13
+    - xeus >=0.13.0,<0.14
     - cppzmq 4.2.3
     - xtl >=0.4.8,<0.5
     - xproperty >=0.7,<0.8
@@ -30,7 +30,7 @@ requirements:
     - libcxx            # [osx]
     - nlohmann_json >=3.1.1,<4.0
   run:
-    - xeus >=0.12.0,<0.13
+    - xeus >=0.13.0,<0.14
     - cppzmq 4.2.3
     - xtl >=0.4.8,<0.5
     - xproperty >=0.7,<0.8
